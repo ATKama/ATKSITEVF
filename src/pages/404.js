@@ -4,8 +4,6 @@ import { Theme, Link, Box, Button, Section, Text, Image } from "@quarkly/widgets
 import { Helmet } from "react-helmet";
 import { GlobalQuarklyPageStyles } from "global-page-styles";
 import { Override, StackItem, Stack, SocialMedia } from "@quarkly/components";
-import * as Components from "components";
-import { MdMenu } from "react-icons/md";
 export default (() => {
 	return <Theme theme={theme}>
 		<GlobalQuarklyPageStyles pageUrl={"404"} />
@@ -49,77 +47,6 @@ export default (() => {
 					link-display="grid"
 				/>
 			</Box>
-			<Components.BurgerMenu md-display="flex" md-align-items="center" md-justify-content="flex-end">
-				<Override
-					slot="menu"
-					lg-transition="transform 400ms ease 0s"
-					md-position="fixed"
-					display="flex"
-					md-top={0}
-					padding="0px 0 0px 0"
-					align-items="center"
-					lg-transform="translateY(0px) translateX(0px)"
-					md-width="100%"
-					md-height="100%"
-					justify-content="center"
-					md-left={0}
-				>
-					<Override
-						slot="item"
-						text-transform="uppercase"
-						text-align="center"
-						padding="8px 20px 8px 20px"
-						md-padding="16px 40px 16px 40px"
-						display="inline-block"
-					/>
-					<Override slot="item-404" lg-display="none" display="none" />
-					<Override slot="item-index" lg-display="none" display="none" />
-					<Override
-						slot="link"
-						transition="opacity .15s ease 0s"
-						hover-opacity="1"
-						md-font="16px/24px sans-serif"
-						color="--dark"
-						font="--base"
-						text-transform="initial"
-						md-transition="opacity .15s ease 0s"
-						md-active-opacity="1"
-						text-decoration-line="initial"
-						letter-spacing="0.5px"
-						md-hover-opacity="1"
-						opacity=".5"
-						md-color="--dark"
-						md-opacity=".5"
-					/>
-					<Override
-						slot="link-active"
-						md-opacity="1"
-						md-cursor="default"
-						opacity="1"
-						color="--primary"
-						cursor="default"
-					/>
-				</Override>
-				<Override slot="icon,icon-close" category="md" icon={MdMenu} />
-				<Override
-					slot="icon"
-					category="md"
-					icon={MdMenu}
-					size="36px"
-					md-right="0px"
-					md-position="relative"
-				/>
-				<Override
-					slot="menu-open"
-					md-display="flex"
-					md-flex-direction="column"
-					md-align-items="center"
-					md-justify-content="center"
-					md-top={0}
-					md-bottom={0}
-				/>
-				<Override slot="icon-open" md-position="fixed" md-top="18px" md-right="18px" />
-			</Components.BurgerMenu>
 			<Button
 				font="--base"
 				z-index="5"
@@ -131,7 +58,7 @@ export default (() => {
 				md-display="none"
 				white-space="nowrap"
 				transition="transform --transitionDuration-fast --transitionTimingFunction-easeInOut 0s"
-				justify-self="end"
+				justify-self="stretch"
 			>
 				Contact Us
 			</Button>

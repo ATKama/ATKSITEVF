@@ -60,7 +60,7 @@ export default {
 		"serifGaramond": "'Palatino Linotype', Palatino, Palladio, 'URW Palladio L', 'Book Antiqua', Baskerville, 'Bookman Old Style', 'Bitstream Charter', 'Nimbus Roman No9 L', Garamond, 'Apple Garamond', 'ITC Garamond Narrow', 'New Century Schoolbook', 'Century Schoolbook', 'Century Schoolbook L', Georgia, serif",
 		"googleOrbitron": "\"Orbitron\", sans-serif",
 		"googleTitanOne": "\"Titan One\", cursive",
-		"googleMontserrat": "\"Montserrat\", sans-serif"
+		"googleRaleway": "\"Raleway\", sans-serif"
 	},
 	"font": {
 		"headline1": "normal 900 72px/1.2 --fontFamily-sans",
@@ -192,8 +192,8 @@ export default {
 				]
 			}
 		},
-		"Montserrat": {
-			"family": "Montserrat",
+		"Raleway": {
+			"family": "Raleway",
 			"type": "google-fonts",
 			"meta": {
 				"category": "sans-serif",
@@ -220,5 +220,5 @@ export default {
 			}
 		}
 	},
-	"version": 37
+	"version": 43
 }

@@ -171,22 +171,27 @@ export default (() => {
 				overflow-x="auto"
 			/>
 			<Text
-				margin="px 0px 0px 0px"
+				margin="150px 0px 0px 0px"
 				sm-text-align="center"
-				sm-width="80%"
+				sm-width="100%"
 				lg-text-align="center"
 				lg-font="--headline2"
 				color="--light"
 				font="--headline2"
-				width="1000px"
+				width="800px"
 				flex="1 1 0%"
 				display="flex"
+				sm-flex-direction="column-reverse"
+				sm-flex="0 1 auto"
+				sm-align-items="center"
+				sm-height="auto"
+				sm-overflow-x="visible"
+				sm-justify-content="center"
+				sm-font="normal small-caps 900 35px/1.2 --fontFamily-googleOrbitron"
+				sm-margin="80px 0px 0px 0px"
+				text-align="center"
 			>
-				<br />
-				<br />
-				<br />
-				<br />
-				CONCEPTION SONORE NOUVELLE GÉNÉRATION
+				ATK Music - Valoriser votre marque avec une identité sonore adaptée{" "}
 			</Text>
 			<Text
 				sm-text-align="center"
@@ -202,6 +207,10 @@ export default (() => {
 				width="50% content-box"
 				position="relative"
 				top="-65\n\t\tpx"
+				sm-font="normal 500 20px/1.2 -apple-system, system-ui, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif"
+				sm-flex="0 1 auto"
+				sm-margin="-80px 0px 10px 0px"
+				sm-top="60px"
 			>
 				<br />
 				<br />
@@ -221,6 +230,7 @@ export default (() => {
 				height="initial"
 				position="relative"
 				top="-64px"
+				sm-top="-10px"
 			>
 				Learn More
 			</Link>
@@ -246,32 +256,6 @@ export default (() => {
 				min-width="auto"
 				margin="0px 32px 0px 32px"
 			/>
-			<Text
-				text-align="center"
-				font="--base"
-				opacity="0.6"
-				letter-spacing="1px"
-				margin="0px 0px 10px 0px"
-				lg-margin="0px 0px 6px 0px"
-				quarkly-title="Title"
-				text-transform="uppercase"
-				color="--dark"
-				lg-text-align="center"
-			>
-				Our Mission
-			</Text>
-			<Text
-				letter-spacing="1px"
-				color="--dark"
-				text-align="center"
-				width="85%"
-				lg-font="--lead"
-				sm-font="--base"
-				font="normal 500 28px/1.2 'AvenirNextCyrRegular', sans-serif"
-				margin="0px 0px 0px 0px"
-			>
-				We empower creators to do their best work while maintaining our uncompromising values while we grow.
-			</Text>
 		</Section>
 		<Section
 			md-padding="25px 0px 25px 0px"
@@ -303,19 +287,6 @@ export default (() => {
 					align-items="flex-start"
 				>
 					<Text
-						font="--base"
-						letter-spacing="1px"
-						quarkly-title="Title"
-						margin="0px 0px 10px 0px"
-						color="--dark"
-						opacity="0.6"
-						lg-text-align="center"
-						lg-margin="0px 0px 6px 0px"
-						text-transform="uppercase"
-					>
-						Team
-					</Text>
-					<Text
 						md-font="--headline3"
 						font="--headline2"
 						margin="0px 0px 28px 0px"
@@ -324,7 +295,7 @@ export default (() => {
 						lg-margin="0px 0px 18px 0px"
 						sm-font="--headline3"
 					>
-						Who We Are
+						QUI SOMMES NOUS ?
 					</Text>
 					<Text
 						lg-margin="0px 0px 18px 0px"
@@ -335,23 +306,8 @@ export default (() => {
 						opacity="0.6"
 						lg-text-align="left"
 					>
-						It all begins with an idea. Maybe you want to launch a business. Maybe you want to turn a hobby into something bigger. Or maybe you have a creative project to share with the world. Whatever it is, the way you tell your story online can make all the difference.
+						ATK Music, est un studio où la création sonore devient un véritable levier d’identité et d’impact. Nous collaborons avec des PME, des artistes et des structures pédagogiques pour concevoir des univers sonores sur mesure, alignés avec leurs intentions créatives ou stratégiques. Chaque production vise à valoriser un message, une ambiance ou une émotion, avec exigence technique et sens artistique.{"\n\n"}
 					</Text>
-					<Link
-						href="/about"
-						color="--light"
-						padding="8px 18px 8px 18px"
-						text-align="center"
-						transition="transform --transitionDuration-fast --transitionTimingFunction-easeInOut 0s"
-						text-decoration-line="initial"
-						font="--base"
-						letter-spacing="0.5px"
-						margin="9px 0px 0px 0px"
-						background="--color-primary"
-						hover-transform="translateY(-4px)"
-					>
-						Read More
-					</Link>
 				</Box>
 				<Box
 					padding="0px 0px 60% 0px"
@@ -360,7 +316,7 @@ export default (() => {
 					transition="background --transitionDuration-normal --transitionTimingFunction-easeInOut 0s"
 					md-order="-1"
 					width="100%"
-					background="--color-lightD2 url(https://uploads.quarkly.io/5f44d0da669357001e60ed14/images/default-website-illustration-sea-first.svg?v=2020-11-06T16:37:39.391Z) center center/100% no-repeat"
+					background="--color-lightD2 url(https://uploads.quarkly.io/67fa69a79710450018a84f18/images/laptop-screen-showing-interface-music-program-working-with-sound.jpg?v=2025-04-15T20:14:43.236Z) center center/100% no-repeat"
 					margin="0px 0px 0px 0px"
 					lg-order="-1"
 				/>
@@ -990,61 +946,12 @@ export default (() => {
 				min-width="auto"
 				width="100%"
 				margin="0px 32px 0px 32px"
+				align-self="auto"
+				align-content="space-around"
+				justify-content="space-around"
+				flex-direction="row"
 			/>
-			<Box
-				justify-content="center"
-				flex-direction="column"
-				md-min-height="360px"
-				min-height="480px"
-				padding="36px 24px 36px 24px"
-				align-items="center"
-				sm-min-height="280px"
-				display="flex"
-				background="linear-gradient(180deg,rgba(24, 29, 34, 0.5) 0%,transparent 100%) 0 0 no-repeat,--color-lightD1 url(https://uploads.quarkly.io/5f44d0da669357001e60ed14/images/default-website-fireworks.svg?v=2020-11-06T17:22:27.801Z) center center/cover no-repeat"
-				lg-min-height="420px"
-			>
-				<Text
-					color="--light"
-					md-font="--headline3"
-					margin="10px 0px 15px 0px"
-					font="--headline2"
-					text-align="center"
-					quarkly-title="Title"
-				>
-					Make It Work.
-				</Text>
-				<Text
-					opacity="0.6"
-					text-align="center"
-					quarkly-title="Description"
-					color="--light"
-					max-width="720px"
-					margin="0px 0px 28px 0px"
-					font="--lead"
-				>
-					Good design adds value faster than it adds cost.
-				</Text>
-				<Button
-					z-index="5"
-					hover-opacity=".85"
-					margin="10px auto 0px auto"
-					width="fit-content"
-					font="--lead"
-					letter-spacing="0.5px"
-					background="--color-light"
-					opacity="1"
-					focus-box-shadow="none"
-					hover-box-shadow="none"
-					color="--darkL2"
-					padding="8px 36px 8px 36px"
-					transition="opacity .15s ease 0s"
-					position="relative"
-					active-box-shadow="none"
-					md-font="--base"
-				>
-					Start Now
-				</Button>
-			</Box>
+			<Components.AudioForm />
 		</Section>
 		<Section
 			margin="0 0 0 0"
