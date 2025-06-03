@@ -102,8 +102,9 @@ export default (() => {
 						md-opacity="1"
 						md-cursor="default"
 					/>
-					<Override slot="item-about" width="100px" />
-					<Override slot="item-work" width="150px" />
+					<Override slot="item-about" width="101px" />
+					<Override slot="item-work" width="101px" />
+					<Override slot="item-team" width="101px" />
 				</Override>
 				<Override slot="icon,icon-close" category="md" icon={MdMenu} />
 				<Override
@@ -173,7 +174,7 @@ export default (() => {
 					sm-font="normal 900 42px/1.2 -apple-system, system-ui, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif"
 					lg-font="--headline2"
 				>
-					Our Works.
+					Formations
 				</Text>
 			</Box>
 		</Section>
@@ -611,6 +612,7 @@ export default (() => {
 				</SocialMedia>
 			</Box>
 		</Section>
+		<Components.EmbedHTML />
 		<Link
 			font={"--capture"}
 			font-size={"10px"}

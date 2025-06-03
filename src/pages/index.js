@@ -1,12 +1,11 @@
 import React from "react";
 import theme from "theme";
-import { Theme, Link, Box, Button, Section, Text, Icon, Image } from "@quarkly/widgets";
+import { Theme, Link, Box, Button, Section, Text, Strong, Input, Image } from "@quarkly/widgets";
 import { Helmet } from "react-helmet";
 import { GlobalQuarklyPageStyles } from "global-page-styles";
-import { Override, SocialMedia } from "@quarkly/components";
+import { Override, Formspree, SocialMedia } from "@quarkly/components";
 import * as Components from "components";
 import { MdMenu } from "react-icons/md";
-import { DiBootstrap, DiBingSmall, DiCssTricks, DiEnvato, DiGithubBadge } from "react-icons/di";
 export default (() => {
 	return <Theme theme={theme}>
 		<GlobalQuarklyPageStyles pageUrl={"index"} />
@@ -122,7 +121,8 @@ export default (() => {
 					/>
 					<Override slot="item-404" lg-display="none" display="none" />
 					<Override slot="item-about" flex="0 1 auto" width="101px" />
-					<Override slot="item-work" width="150px" />
+					<Override slot="item-work" width="101px" />
+					<Override slot="item-team" width="101px" />
 				</Override>
 				<Override slot="icon,icon-close" category="md" icon={MdMenu} />
 			</Components.BurgerMenu>
@@ -150,17 +150,18 @@ export default (() => {
 			sm-align-items="center"
 			sm-justify-content="center"
 			quarkly-title="Hero"
+			margin="0 0 0px 0x"
 		>
 			<Override
 				slot="SectionContent"
 				md-margin="0px 16px 0px 16px"
 				width="100%"
-				background="linear-gradient(180deg,rgba(155, 108, 252, 0.15) 0%,transparent 100%) 0 0 no-repeat,#191C23 url(https://uploads.quarkly.io/67fa69a79710450018a84f18/images/20250413_0022_Futuristic%20Audio%20Tech%20Background_simple_compose_01jrp1e7kbfqj8pecnpwqzqjcn.png?v=2025-04-12T22:24:31.438Z) 0% 0%/cover no-repeat scroll"
+				background="linear-gradient(180deg,rgba(155, 108, 252, 0.15) 0%,transparent 100%) 0 0 no-repeat,#191C23 url(https://uploads.quarkly.io/67fa69a79710450018a84f18/images/DALL%C2%B7E%202025-04-25%2015.16.55%20-%20A%20wide%20digital%20background%20suitable%20for%20a%20website,%20featuring%20a%20minimalist%20and%20elegant%20design.%20The%20color%20palette%20should%20be%20soft%20and%20bluish,%20with%20a%20subtl.webp?v=2025-04-25T13:17:34.273Z) 0% 0%/100% no-repeat fixed"
 				height="620px"
 				justify-content="center"
 				sm-width="100%"
 				min-width="auto"
-				margin="0px 32px 0px 32px"
+				margin="0px px px 32px"
 				align-items="center"
 				lg-height="520px"
 				md-height="420px"
@@ -169,6 +170,7 @@ export default (() => {
 				display="flex"
 				flex-direction="column"
 				overflow-x="auto"
+				sm-background="#191C23 url(https://uploads.quarkly.io/67fa69a79710450018a84f18/images/DALL%C2%B7E%202025-04-25%2015.16.55%20-%20A%20wide%20digital%20background%20suitable%20for%20a%20website,%20featuring%20a%20minimalist%20and%20elegant%20design.%20The%20color%20palette%20should%20be%20soft%20and%20bluish,%20with%20a%20subtl.webp?v=2025-04-25T13:17:34.273Z) 0% 0%/cover no-repeat fixed"
 			/>
 			<Text
 				margin="150px 0px 0px 0px"
@@ -191,7 +193,9 @@ export default (() => {
 				sm-margin="80px 0px 0px 0px"
 				text-align="center"
 			>
-				ATK Music - Valoriser votre marque avec une identité sonore adaptée{" "}
+				| ATK Music |{" "}
+				<br />
+				Donnez une voix, une âme et une identité sonore à vos projets
 			</Text>
 			<Text
 				sm-text-align="center"
@@ -206,7 +210,7 @@ export default (() => {
 				height="223px"
 				width="50% content-box"
 				position="relative"
-				top="-65\n\t\tpx"
+				top="-65\\\\n\\\\t\\\\tpx"
 				sm-font="normal 500 20px/1.2 -apple-system, system-ui, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif"
 				sm-flex="0 1 auto"
 				sm-margin="-80px 0px 10px 0px"
@@ -295,7 +299,7 @@ export default (() => {
 						lg-margin="0px 0px 18px 0px"
 						sm-font="--headline3"
 					>
-						QUI SOMMES NOUS ?
+						Qui sommes nous ?
 					</Text>
 					<Text
 						lg-margin="0px 0px 18px 0px"
@@ -306,7 +310,7 @@ export default (() => {
 						opacity="0.6"
 						lg-text-align="left"
 					>
-						ATK Music, est un studio où la création sonore devient un véritable levier d’identité et d’impact. Nous collaborons avec des PME, des artistes et des structures pédagogiques pour concevoir des univers sonores sur mesure, alignés avec leurs intentions créatives ou stratégiques. Chaque production vise à valoriser un message, une ambiance ou une émotion, avec exigence technique et sens artistique.{"\n\n"}
+						ATK Music, est un studio où la création sonore devient un véritable levier d’identité et d’impact. Nous collaborons avec des PME, des artistes et des structures pédagogiques pour concevoir des univers sonores sur mesure, alignés avec leurs intentions créatives ou stratégiques. Chaque production vise à valoriser un message, une ambiance ou une émotion, avec exigence technique et sens artistique.
 					</Text>
 				</Box>
 				<Box
@@ -319,6 +323,7 @@ export default (() => {
 					background="--color-lightD2 url(https://uploads.quarkly.io/67fa69a79710450018a84f18/images/laptop-screen-showing-interface-music-program-working-with-sound.jpg?v=2025-04-15T20:14:43.236Z) center center/100% no-repeat"
 					margin="0px 0px 0px 0px"
 					lg-order="-1"
+					pointer-events="none"
 				/>
 			</Box>
 			<Box
@@ -336,10 +341,10 @@ export default (() => {
 					margin="0px 0px 0px 0px"
 					padding="0px 0px 60% 0px"
 					height="0px"
-					hover-background="--color-lightD2 url(https://uploads.quarkly.io/5f44d0da669357001e60ed14/images/default-website-illustration-sea-second.svg?v=2020-11-06T17:14:59.136Z) center center/110% no-repeat"
+					hover-background="--color-lightD2 url(https://uploads.quarkly.io/67fa69a79710450018a84f18/images/WhatsApp%20Image%202025-04-24%20%C3%A0%2012.14.37_d02dad3a.jpg?v=2025-04-24T10:16:00.654Z) center center/110% no-repeat"
 					transition="background --transitionDuration-normal --transitionTimingFunction-easeInOut 0s"
 					width="100%"
-					background="--color-lightD2 url(https://uploads.quarkly.io/5f44d0da669357001e60ed14/images/default-website-illustration-sea-second.svg?v=2020-11-06T17:14:59.136Z) center center/100% no-repeat"
+					background="--color-lightD2 url(https://uploads.quarkly.io/67fa69a79710450018a84f18/images/ai-generated-8352992_1280.jpg?v=2025-04-25T13:07:02.591Z) center center/100% no-repeat"
 				/>
 				<Box
 					display="flex"
@@ -349,19 +354,6 @@ export default (() => {
 					min-height="100px"
 				>
 					<Text
-						lg-text-align="center"
-						quarkly-title="Title"
-						text-transform="uppercase"
-						opacity="0.6"
-						lg-margin="0px 0px 6px 0px"
-						font="--base"
-						margin="0px 0px 10px 0px"
-						letter-spacing="1px"
-						color="--dark"
-					>
-						expertise
-					</Text>
-					<Text
 						font="--headline2"
 						margin="0px 0px 28px 0px"
 						color="--dark"
@@ -370,7 +362,7 @@ export default (() => {
 						sm-font="--headline3"
 						md-font="--headline3"
 					>
-						Why Choose Us
+						Services
 					</Text>
 					<Text
 						opacity="0.6"
@@ -382,7 +374,17 @@ export default (() => {
 						margin="0px 0px 20px 0px"
 						color="--darkL2"
 					>
-						It all begins with an idea. Maybe you want to launch a business. Maybe you want to turn a hobby into something bigger. Or maybe you have a creative project to share with the world. Whatever it is, the way you tell your story online can make all the difference.
+						<Strong
+							overflow-wrap="normal"
+							word-break="normal"
+							white-space="normal"
+							text-indent="0"
+							text-overflow="clip"
+							hyphens="manual"
+							user-select="auto"
+							pointer-events="auto"
+						/>
+						{"\n"}De la musique originale au sound design, du podcast à la publicité, nous créons des univers audio sur-mesure, puissants et expressifs.{"\n\n"}
 					</Text>
 					<Link
 						color="--light"
@@ -397,7 +399,7 @@ export default (() => {
 						letter-spacing="0.5px"
 						margin="9px 0px 0px 0px"
 					>
-						Read More
+						Découvrir l'ensemble de nos services
 					</Link>
 				</Box>
 			</Box>
@@ -429,9 +431,7 @@ export default (() => {
 						opacity="0.6"
 						lg-margin="0px 0px 6px 0px"
 						font="--base"
-					>
-						CONTACTS
-					</Text>
+					/>
 					<Text
 						font="--headline2"
 						margin="0px 0px 28px 0px"
@@ -442,7 +442,7 @@ export default (() => {
 						sm-font="--headline3"
 						md-font="--headline3"
 					>
-						Where We Work
+						Ateliers et formations
 					</Text>
 					<Text
 						font="--lead"
@@ -453,7 +453,47 @@ export default (() => {
 						lg-margin="0px 0px 18px 0px"
 						sm-font="--base"
 					>
-						It all begins with an idea. Maybe you want to launch a business. Maybe you want to turn a hobby into something bigger. Or maybe you have a creative project to share with the world. Whatever it is, the way you tell your story online can make all the difference.
+						<Strong>
+							Forts de plusieurs années d’expérience
+						</Strong>
+						, ATK Music conçoit et anime des{" "}
+						<Strong>
+							ateliers de beatmaking, d’écriture rap et d’expression artistique
+						</Strong>
+						.{"\n"}
+						<br />
+						<br />
+						Notre objectif :{" "}
+						<Strong>
+							offrir un espace de découverte et d’expression
+						</Strong>
+						, où chacun peut expérimenter la création musicale de façon{" "}
+						<Strong>
+							libre, ludique et accessible
+						</Strong>
+						.{"\n"}
+						<br />
+						<br />
+						Au-delà de l’apprentissage technique, ces ateliers sont avant tout{" "}
+						<Strong>
+							des temps d’exploration créative
+						</Strong>
+						, pour{" "}
+						<Strong>
+							se raconter, partager et créer ensemble
+						</Strong>
+						.{"\n"}
+						<br />
+						<br />
+						Ils s’inscrivent dans des{" "}
+						<Strong>
+							projets pédagogiques ou culturels
+						</Strong>
+						{" "}menés avec des{" "}
+						<Strong>
+							établissements scolaires, structures socio-culturelles ou événements éducatifs
+						</Strong>
+						.{"\n\n"}
 					</Text>
 					<Link
 						margin="9px 0px 0px 0px"
@@ -463,7 +503,7 @@ export default (() => {
 						font="--base"
 						transition="transform --transitionDuration-fast --transitionTimingFunction-easeInOut 0s"
 						text-align="center"
-						href="/contact"
+						href="/Ateliers"
 						color="--light"
 						letter-spacing="0.5px"
 						background="--color-primary"
@@ -599,359 +639,66 @@ export default (() => {
 			>
 				View More
 			</Link>
-		</Section>
-		<Section
-			sm-padding="24px 0 24px 0"
-			background="--color-lightD1"
-			border-style="solid"
-			box-sizing="border-box"
-			justify-content="center"
-			padding="90px 0px 100px 0px"
-			border-color="--color-lightD2"
-			border-width="1px 0px 1px 0px"
-			lg-padding="50px 30px 50px 30px"
-			quarkly-title="FAQ"
-		>
-			<Override
-				slot="SectionContent"
-				width="100%"
-				min-width="auto"
-				margin="0px 48px 0px 48px"
-				md-margin="0px 16px 0px 16px"
-				align-items="center"
-			/>
-			<Text
-				font="--base"
-				margin="0px 0px 10px 0px"
-				text-transform="uppercase"
-				lg-margin="0px 0px 6px 0px"
-				quarkly-title="Title"
-				letter-spacing="1px"
-				color="--dark"
-				opacity="0.6"
-				text-align="center"
-				lg-text-align="center"
-			>
-				We're here to help
-			</Text>
-			<Text
-				sm-font="--headline3"
-				md-font="--headline3"
-				font="--headline2"
-				margin="0px 0px 64px 0px"
-				color="--dark"
-				text-align="center"
-				lg-text-align="center"
-				lg-margin="0px 0px 36px 0px"
-			>
-				FAQ
-			</Text>
-			<Box
-				width="100%"
-				display="grid"
-				grid-gap="32px"
-				grid-template-columns="repeat(4, 1fr)"
-				lg-grid-template-columns="repeat(2, 1fr)"
-				md-grid-template-columns="1fr"
-			>
-				<Box>
-					<Text
-						text-align="center"
-						md-text-align="left"
-						font="--lead"
-						margin="0px 0px 0px 0px"
-						color="--dark"
-					>
-						Have any questions?
-					</Text>
-					<Text
-						text-align="center"
-						margin="16px 0px 0px 0px"
-						md-text-align="left"
-						sm-margin="8px 0px 0px 0px"
-						font="--base"
-						color="--darkL2"
-						opacity="0.6"
-						lg-text-align="center"
-					>
-						It all begins with an idea. Maybe you want to launch a business. Maybe you want to turn a hobby into something bigger.
-					</Text>
+			<Section background="--color-light" color="--dark" padding="64px 0 64px 0">
+				<Box margin="-16px -16px -16px -16px" display="flex" flex-wrap="wrap">
+					<Box padding="16px 16px 16px 16px" width="50%" lg-width="100%">
+						<Box>
+							<Text
+								font="--base"
+								color="--grey"
+								letter-spacing="1px"
+								text-transform="uppercase"
+								margin="0"
+							>
+								Contact
+							</Text>
+							<Text font="--headline2" max-width="500px" margin="10px 0 0 0">
+								Une question ou un projet sonore ?{" "}
+								<br />
+								Écrivez-nous
+							</Text>
+						</Box>
+					</Box>
+					<Box width="50%" padding="8px 8px 8px 8px" lg-width="100%">
+						<Box>
+							<Formspree endpoint="xldbdeob">
+								<Box
+									gap="16px"
+									display="grid"
+									flex-direction="row"
+									flex-wrap="wrap"
+									grid-template-columns="repeat(2, 1fr)"
+									grid-gap="16px"
+								>
+									<Box sm-width="100%" display="flex" flex-direction="column">
+										<Text font="--base" margin="0 0 4px 0">
+											Name
+										</Text>
+										<Input width="100%" name="nom" type="text" />
+									</Box>
+									<Box sm-width="100%" display="flex" flex-direction="column">
+										<Text font="--base" margin="0 0 4px 0">
+											Email
+										</Text>
+										<Input width="100%" type="email" name="email" />
+									</Box>
+									<Box display="flex" flex-direction="column" grid-column="1 / span 2">
+										<Text font="--base" margin="0 0 4px 0">
+											Message
+										</Text>
+										<Input as="textarea" rows="4" width="100%" name="message" />
+									</Box>
+									<Box display="flex" flex-direction="column" align-items="flex-start" grid-column="1 / span 2">
+										<Button>
+											Send
+										</Button>
+									</Box>
+								</Box>
+							</Formspree>
+						</Box>
+					</Box>
 				</Box>
-				<Box>
-					<Text
-						margin="0px 0px 0px 0px"
-						color="--dark"
-						text-align="center"
-						md-text-align="left"
-						font="--lead"
-					>
-						Have any questions?
-					</Text>
-					<Text
-						lg-text-align="center"
-						text-align="center"
-						margin="16px 0px 0px 0px"
-						md-text-align="left"
-						sm-margin="8px 0px 0px 0px"
-						font="--base"
-						color="--darkL2"
-						opacity="0.6"
-					>
-						It all begins with an idea. Maybe you want to launch a business. Maybe you want to turn a hobby into something bigger.
-					</Text>
-				</Box>
-				<Box>
-					<Text
-						color="--dark"
-						text-align="center"
-						md-text-align="left"
-						font="--lead"
-						margin="0px 0px 0px 0px"
-					>
-						Have any questions?
-					</Text>
-					<Text
-						font="--base"
-						color="--darkL2"
-						opacity="0.6"
-						lg-text-align="center"
-						text-align="center"
-						margin="16px 0px 0px 0px"
-						md-text-align="left"
-						sm-margin="8px 0px 0px 0px"
-					>
-						It all begins with an idea. Maybe you want to launch a business. Maybe you want to turn a hobby into something bigger.
-					</Text>
-				</Box>
-				<Box>
-					<Text
-						font="--lead"
-						margin="0px 0px 0px 0px"
-						color="--dark"
-						text-align="center"
-						md-text-align="left"
-					>
-						Have any questions?
-					</Text>
-					<Text
-						lg-text-align="center"
-						text-align="center"
-						margin="16px 0px 0px 0px"
-						md-text-align="left"
-						sm-margin="8px 0px 0px 0px"
-						font="--base"
-						color="--darkL2"
-						opacity="0.6"
-					>
-						It all begins with an idea. Maybe you want to launch a business. Maybe you want to turn a hobby into something bigger.
-					</Text>
-				</Box>
-			</Box>
-		</Section>
-		<Section padding="80px 0 80px 0" quarkly-title="Customers" lg-padding="50px 0 50px 0" justify-content="center">
-			<Override
-				slot="SectionContent"
-				min-width="auto"
-				margin="0px 32px 0px 32px"
-				align-items="center"
-				width="100%"
-				md-margin="0px 16px 0px 16px"
-			/>
-			<Text
-				color="--dark"
-				text-align="center"
-				lg-margin="0px 0px 6px 0px"
-				text-transform="uppercase"
-				lg-text-align="center"
-				quarkly-title="Title"
-				font="--base"
-				margin="0px 0px 10px 0px"
-				letter-spacing="1px"
-				opacity="0.6"
-			>
-				They trust us
-			</Text>
-			<Text
-				text-align="center"
-				lg-text-align="center"
-				sm-margin="0px 0px 48px 0px"
-				sm-font="--headline3"
-				md-font="--headline3"
-				font="--headline2"
-				margin="0px 0px 64px 0px"
-				color="--dark"
-			>
-				Our Customers
-			</Text>
-			<Box
-				lg-grid-template-columns="repeat(6, 1fr)"
-				sm-grid-template-columns="1fr"
-				display="grid"
-				width="100%"
-				grid-gap="32px"
-				grid-template-columns="repeat(5, 1fr)"
-			>
-				<Box
-					sm-align-items="center"
-					sm-margin="0px 0px 0px 20px"
-					lg-grid-column="1 / span 2"
-					sm-grid-column="auto / auto"
-					sm-display="flex"
-				>
-					<Icon
-						category="di"
-						icon={DiBootstrap}
-						margin="0px auto 0px auto"
-						size="84px"
-						lg-font="64px sans-serif"
-						sm-margin="0px 13px 0px 0px"
-						sm-font="48px sans-serif"
-					/>
-					<Text
-						md-margin="16px 0px 0px 0px"
-						sm-margin="0px 0px 0px 0px"
-						font="--base"
-						color="--darkL2"
-						opacity="0.6"
-						lg-text-align="center"
-						text-align="center"
-					>
-						Company Name
-					</Text>
-				</Box>
-				<Box
-					sm-align-items="center"
-					sm-margin="0px 0px 0px 20px"
-					lg-grid-column="3 / span 2"
-					sm-grid-column="auto / auto"
-					sm-display="flex"
-				>
-					<Icon
-						size="84px"
-						lg-font="64px sans-serif"
-						sm-margin="0px 13px 0px 0px"
-						sm-font="48px sans-serif"
-						category="di"
-						icon={DiBingSmall}
-						margin="0px auto 0px auto"
-					/>
-					<Text
-						text-align="center"
-						md-margin="16px 0px 0px 0px"
-						sm-margin="0px 0px 0px 0px"
-						font="--base"
-						color="--darkL2"
-						opacity="0.6"
-						lg-text-align="center"
-					>
-						Company Name
-					</Text>
-				</Box>
-				<Box
-					lg-grid-column="5 / span 2"
-					sm-grid-column="auto / auto"
-					sm-display="flex"
-					sm-align-items="center"
-					sm-margin="0px 0px 0px 20px"
-				>
-					<Icon
-						sm-font="48px sans-serif"
-						category="di"
-						icon={DiCssTricks}
-						margin="0px auto 0px auto"
-						size="84px"
-						lg-font="64px sans-serif"
-						sm-margin="0px 13px 0px 0px"
-					/>
-					<Text
-						font="--base"
-						color="--darkL2"
-						opacity="0.6"
-						lg-text-align="center"
-						text-align="center"
-						md-margin="16px 0px 0px 0px"
-						sm-margin="0px 0px 0px 0px"
-					>
-						Company Name
-					</Text>
-				</Box>
-				<Box
-					lg-grid-column="2 / span 2"
-					sm-grid-column="auto / auto"
-					sm-display="flex"
-					sm-align-items="center"
-					sm-margin="0px 0px 0px 20px"
-				>
-					<Icon
-						icon={DiEnvato}
-						margin="0px auto 0px auto"
-						size="84px"
-						lg-font="64px sans-serif"
-						sm-margin="0px 13px 0px 0px"
-						sm-font="48px sans-serif"
-						category="di"
-					/>
-					<Text
-						color="--darkL2"
-						opacity="0.6"
-						lg-text-align="center"
-						text-align="center"
-						md-margin="16px 0px 0px 0px"
-						sm-margin="0px 0px 0px 0px"
-						font="--base"
-					>
-						Company Name
-					</Text>
-				</Box>
-				<Box
-					lg-grid-column="4 / span 2"
-					sm-grid-column="auto / auto"
-					sm-display="flex"
-					sm-align-items="center"
-					sm-margin="0px 0px 0px 20px"
-				>
-					<Icon
-						lg-font="64px sans-serif"
-						sm-margin="0px 13px 0px 0px"
-						sm-font="48px sans-serif"
-						category="di"
-						icon={DiGithubBadge}
-						margin="0px auto 0px auto"
-						size="84px"
-					/>
-					<Text
-						opacity="0.6"
-						lg-text-align="center"
-						text-align="center"
-						md-margin="16px 0px 0px 0px"
-						sm-margin="0px 0px 0px 0px"
-						font="--base"
-						color="--darkL2"
-					>
-						Company Name
-					</Text>
-				</Box>
-			</Box>
-		</Section>
-		<Section
-			quarkly-title="USP"
-			padding="75px 0 50px 0"
-			lg-padding="50px 0 25px 0"
-			lg-height="auto"
-			justify-content="center"
-		>
-			<Override
-				slot="SectionContent"
-				md-margin="0px 16px 0px 16px"
-				min-width="auto"
-				width="100%"
-				margin="0px 32px 0px 32px"
-				align-self="auto"
-				align-content="space-around"
-				justify-content="space-around"
-				flex-direction="row"
-			/>
-			<Components.AudioForm />
+			</Section>
 		</Section>
 		<Section
 			margin="0 0 0 0"
@@ -959,6 +706,7 @@ export default (() => {
 			box-sizing="border-box"
 			quarkly-title="Footer"
 			justify-content="center"
+			id="contact"
 		>
 			<Override
 				slot="SectionContent"

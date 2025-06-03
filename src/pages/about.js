@@ -1,13 +1,11 @@
 import React from "react";
 import theme from "theme";
-import { Theme, Link, Box, Button, Section, Text, Icon, Image } from "@quarkly/widgets";
+import { Theme, Link, Box, Button, Section, Text, Image } from "@quarkly/widgets";
 import { Helmet } from "react-helmet";
 import { GlobalQuarklyPageStyles } from "global-page-styles";
 import { Override, SocialMedia } from "@quarkly/components";
 import * as Components from "components";
-import { MdMenu, MdFace } from "react-icons/md";
-import { FaRegGem, FaRegLifeRing, FaRegCalendarCheck, FaRegStar } from "react-icons/fa";
-import { AiOutlineThunderbolt } from "react-icons/ai";
+import { MdMenu } from "react-icons/md";
 export default (() => {
 	return <Theme theme={theme}>
 		<GlobalQuarklyPageStyles pageUrl={"about"} />
@@ -122,8 +120,9 @@ export default (() => {
 						text-transform="uppercase"
 					/>
 					<Override slot="item-404" lg-display="none" display="none" />
-					<Override slot="item-about" width="100px" />
-					<Override slot="item-work" width="150px" />
+					<Override slot="item-about" width="101px" />
+					<Override slot="item-work" width="101px" />
+					<Override slot="item-team" width="101px" />
 				</Override>
 				<Override slot="icon,icon-close" category="md" icon={MdMenu} />
 			</Components.BurgerMenu>
@@ -175,7 +174,7 @@ export default (() => {
 					sm-font="normal 900 42px/1.2 -apple-system, system-ui, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif"
 					lg-font="--headline2"
 				>
-					About Us.
+					Services
 				</Text>
 			</Box>
 		</Section>
@@ -212,9 +211,7 @@ export default (() => {
 				quarkly-title="Title"
 				text-transform="uppercase"
 				text-align="center"
-			>
-				Who we are
-			</Text>
+			/>
 			<Text
 				letter-spacing="1px"
 				color="--dark"
@@ -225,7 +222,7 @@ export default (() => {
 				font="--headline3"
 				margin="0px 0px 0px 0px"
 			>
-				We’re a group of creatives who've built a business to make the world a better place.
+				Podcast, pub, musique, sound design… une seule direction artistique pour tout ce qui s’écoute.{"\n\n"}
 			</Text>
 		</Section>
 		<Section
@@ -245,20 +242,6 @@ export default (() => {
 				align-items="center"
 			/>
 			<Text
-				letter-spacing="1px"
-				lg-margin="0px 0px 6px 0px"
-				quarkly-title="Title"
-				margin="0px 0px 10px 0px"
-				color="--dark"
-				opacity="0.6"
-				text-align="center"
-				text-transform="uppercase"
-				lg-text-align="center"
-				font="--base"
-			>
-				WHAT WE DO BEST
-			</Text>
-			<Text
 				lg-margin="0px 0px 48px 0px"
 				md-font="--headline3"
 				sm-margin="0px 0px 36px 0px"
@@ -268,160 +251,82 @@ export default (() => {
 				text-align="center"
 				lg-text-align="center"
 			>
-				Our Services
+				Nos Services
 			</Text>
-			<Box
-				grid-template-columns="repeat(3, 1fr)"
-				lg-grid-template-columns="repeat(2, 1fr)"
-				md-grid-template-columns="1fr"
-				width="100%"
-				display="grid"
-				grid-gap="32px"
-			>
-				<Box display="flex" flex-direction="column" align-items="center" justify-content="center">
-					<Icon
-						category="fa"
-						icon={FaRegGem}
-						size="82px"
-						margin="0px 0px 19px 0px"
-						font="36px sans-serif"
-						color="--primary"
-					/>
-					<Text color="--darkL2" font="--lead" margin="0px 0px 10px 0px" display="inline-block">
-						High Quality
-					</Text>
-					<Text
-						lg-text-align="center"
-						text-align="center"
-						font="--base"
-						margin="0px 0px 0px 0px"
-						display="inline-block"
-						opacity="0.6"
-						color="--darkL2"
-					>
-						It all begins with an idea. Maybe you want to launch a business. Maybe you want to turn a hobby into something bigger.
-					</Text>
-				</Box>
-				<Box display="flex" flex-direction="column" align-items="center" justify-content="center">
-					<Icon
-						category="fa"
-						icon={FaRegLifeRing}
-						size="82px"
-						margin="0px 0px 19px 0px"
-						font="36px sans-serif"
-						color="--primary"
-					/>
-					<Text font="--lead" margin="0px 0px 10px 0px" display="inline-block" color="--darkL2">
-						Best Support
-					</Text>
-					<Text
-						opacity="0.6"
-						color="--darkL2"
-						lg-text-align="center"
-						text-align="center"
-						font="--base"
-						margin="0px 0px 0px 0px"
-						display="inline-block"
-					>
-						It all begins with an idea. Maybe you want to launch a business. Maybe you want to turn a hobby into something bigger.
-					</Text>
-				</Box>
-				<Box justify-content="center" display="flex" flex-direction="column" align-items="center">
-					<Icon
-						font="36px sans-serif"
-						color="--primary"
-						category="md"
-						icon={MdFace}
-						size="82px"
-						margin="0px 0px 19px 0px"
-					/>
-					<Text font="--lead" margin="0px 0px 10px 0px" display="inline-block" color="--darkL2">
-						Personal Approach
-					</Text>
-					<Text
-						text-align="center"
-						font="--base"
-						margin="0px 0px 0px 0px"
-						display="inline-block"
-						opacity="0.6"
-						color="--darkL2"
-						lg-text-align="center"
-					>
-						It all begins with an idea. Maybe you want to launch a business. Maybe you want to turn a hobby into something bigger.
-					</Text>
-				</Box>
-				<Box display="flex" flex-direction="column" align-items="center" justify-content="center">
-					<Icon
-						category="fa"
-						icon={FaRegCalendarCheck}
-						size="82px"
-						margin="0px 0px 19px 0px"
-						font="36px sans-serif"
-						color="--primary"
-					/>
-					<Text font="--lead" margin="0px 0px 10px 0px" display="inline-block" color="--darkL2">
-						Flexible Schedule
-					</Text>
-					<Text
-						font="--base"
-						margin="0px 0px 0px 0px"
-						display="inline-block"
-						opacity="0.6"
-						color="--darkL2"
-						lg-text-align="center"
-						text-align="center"
-					>
-						It all begins with an idea. Maybe you want to launch a business. Maybe you want to turn a hobby into something bigger.
-					</Text>
-				</Box>
-				<Box display="flex" flex-direction="column" align-items="center" justify-content="center">
-					<Icon
-						font="36px sans-serif"
-						color="--primary"
-						category="fa"
-						icon={FaRegStar}
-						size="82px"
-						margin="0px 0px 19px 0px"
-					/>
-					<Text color="--darkL2" font="--lead" margin="0px 0px 10px 0px" display="inline-block">
-						Extensive Experience
-					</Text>
-					<Text
-						margin="0px 0px 0px 0px"
-						display="inline-block"
-						opacity="0.6"
-						color="--darkL2"
-						lg-text-align="center"
-						text-align="center"
-						font="--base"
-					>
-						It all begins with an idea. Maybe you want to launch a business. Maybe you want to turn a hobby into something bigger.
-					</Text>
-				</Box>
-				<Box display="flex" flex-direction="column" align-items="center" justify-content="center">
-					<Icon
-						color="--primary"
-						category="ai"
-						icon={AiOutlineThunderbolt}
-						size="82px"
-						margin="0px 0px 19px 0px"
-						font="36px sans-serif"
-					/>
-					<Text font="--lead" margin="0px 0px 10px 0px" display="inline-block" color="--darkL2">
-						Better Efficiency
-					</Text>
-					<Text
-						font="--base"
-						margin="0px 0px 0px 0px"
-						display="inline-block"
-						opacity="0.6"
-						color="--darkL2"
-						lg-text-align="center"
-						text-align="center"
-					>
-						It all begins with an idea. Maybe you want to launch a business. Maybe you want to turn a hobby into something bigger.
-					</Text>
-				</Box>
+			<Box min-width="100px" min-height="100px" sm-display="block">
+				<Image
+					src="https://uploads.quarkly.io/67fa69a79710450018a84f18/images/Copie%20de%20Tableau%20%C3%A0%204%20colonnes%20%282%29.png?v=2025-04-25T13:57:03.258Z"
+					display="none"
+					sm-display="block"
+					sm-width="400px"
+					srcSet="https://smartuploads.quarkly.io/67fa69a79710450018a84f18/images/Copie%20de%20Tableau%20%C3%A0%204%20colonnes%20%282%29.png?v=2025-04-25T13%3A57%3A03.258Z&quality=85&w=500 500w,https://smartuploads.quarkly.io/67fa69a79710450018a84f18/images/Copie%20de%20Tableau%20%C3%A0%204%20colonnes%20%282%29.png?v=2025-04-25T13%3A57%3A03.258Z&quality=85&w=800 800w,https://smartuploads.quarkly.io/67fa69a79710450018a84f18/images/Copie%20de%20Tableau%20%C3%A0%204%20colonnes%20%282%29.png?v=2025-04-25T13%3A57%3A03.258Z&quality=85&w=1080 1080w,https://smartuploads.quarkly.io/67fa69a79710450018a84f18/images/Copie%20de%20Tableau%20%C3%A0%204%20colonnes%20%282%29.png?v=2025-04-25T13%3A57%3A03.258Z&quality=85&w=1600 1600w,https://smartuploads.quarkly.io/67fa69a79710450018a84f18/images/Copie%20de%20Tableau%20%C3%A0%204%20colonnes%20%282%29.png?v=2025-04-25T13%3A57%3A03.258Z&quality=85&w=2000 2000w,https://smartuploads.quarkly.io/67fa69a79710450018a84f18/images/Copie%20de%20Tableau%20%C3%A0%204%20colonnes%20%282%29.png?v=2025-04-25T13%3A57%3A03.258Z&quality=85&w=2600 2600w,https://smartuploads.quarkly.io/67fa69a79710450018a84f18/images/Copie%20de%20Tableau%20%C3%A0%204%20colonnes%20%282%29.png?v=2025-04-25T13%3A57%3A03.258Z&quality=85&w=3200 3200w"
+					sizes="(max-width: 479px) 100vw,(max-width: 767px) 100vw,(max-width: 991px) 100vw,(max-width: 1199px) 100vw,100vw"
+				/>
+				<Image
+					src="https://uploads.quarkly.io/67fa69a79710450018a84f18/images/Copie%20de%20Tableau%20%C3%A0%204%20colonnes%20%283%29.png?v=2025-04-25T13:58:38.224Z"
+					display="none"
+					sm-display="block"
+					sm-width="400px"
+					srcSet="https://smartuploads.quarkly.io/67fa69a79710450018a84f18/images/Copie%20de%20Tableau%20%C3%A0%204%20colonnes%20%283%29.png?v=2025-04-25T13%3A58%3A38.224Z&quality=85&w=500 500w,https://smartuploads.quarkly.io/67fa69a79710450018a84f18/images/Copie%20de%20Tableau%20%C3%A0%204%20colonnes%20%283%29.png?v=2025-04-25T13%3A58%3A38.224Z&quality=85&w=800 800w,https://smartuploads.quarkly.io/67fa69a79710450018a84f18/images/Copie%20de%20Tableau%20%C3%A0%204%20colonnes%20%283%29.png?v=2025-04-25T13%3A58%3A38.224Z&quality=85&w=1080 1080w,https://smartuploads.quarkly.io/67fa69a79710450018a84f18/images/Copie%20de%20Tableau%20%C3%A0%204%20colonnes%20%283%29.png?v=2025-04-25T13%3A58%3A38.224Z&quality=85&w=1600 1600w,https://smartuploads.quarkly.io/67fa69a79710450018a84f18/images/Copie%20de%20Tableau%20%C3%A0%204%20colonnes%20%283%29.png?v=2025-04-25T13%3A58%3A38.224Z&quality=85&w=2000 2000w,https://smartuploads.quarkly.io/67fa69a79710450018a84f18/images/Copie%20de%20Tableau%20%C3%A0%204%20colonnes%20%283%29.png?v=2025-04-25T13%3A58%3A38.224Z&quality=85&w=2600 2600w,https://smartuploads.quarkly.io/67fa69a79710450018a84f18/images/Copie%20de%20Tableau%20%C3%A0%204%20colonnes%20%283%29.png?v=2025-04-25T13%3A58%3A38.224Z&quality=85&w=3200 3200w"
+					sizes="(max-width: 479px) 100vw,(max-width: 767px) 100vw,(max-width: 991px) 100vw,(max-width: 1199px) 100vw,100vw"
+				/>
+				<Image
+					src="https://uploads.quarkly.io/67fa69a79710450018a84f18/images/Copie%20de%20Tableau%20%C3%A0%204%20colonnes%20%284%29.png?v=2025-04-25T13:59:49.966Z"
+					display="none"
+					sm-display="block"
+					sm-width="400px"
+					srcSet="https://smartuploads.quarkly.io/67fa69a79710450018a84f18/images/Copie%20de%20Tableau%20%C3%A0%204%20colonnes%20%284%29.png?v=2025-04-25T13%3A59%3A49.966Z&quality=85&w=500 500w,https://smartuploads.quarkly.io/67fa69a79710450018a84f18/images/Copie%20de%20Tableau%20%C3%A0%204%20colonnes%20%284%29.png?v=2025-04-25T13%3A59%3A49.966Z&quality=85&w=800 800w,https://smartuploads.quarkly.io/67fa69a79710450018a84f18/images/Copie%20de%20Tableau%20%C3%A0%204%20colonnes%20%284%29.png?v=2025-04-25T13%3A59%3A49.966Z&quality=85&w=1080 1080w,https://smartuploads.quarkly.io/67fa69a79710450018a84f18/images/Copie%20de%20Tableau%20%C3%A0%204%20colonnes%20%284%29.png?v=2025-04-25T13%3A59%3A49.966Z&quality=85&w=1600 1600w,https://smartuploads.quarkly.io/67fa69a79710450018a84f18/images/Copie%20de%20Tableau%20%C3%A0%204%20colonnes%20%284%29.png?v=2025-04-25T13%3A59%3A49.966Z&quality=85&w=2000 2000w,https://smartuploads.quarkly.io/67fa69a79710450018a84f18/images/Copie%20de%20Tableau%20%C3%A0%204%20colonnes%20%284%29.png?v=2025-04-25T13%3A59%3A49.966Z&quality=85&w=2600 2600w,https://smartuploads.quarkly.io/67fa69a79710450018a84f18/images/Copie%20de%20Tableau%20%C3%A0%204%20colonnes%20%284%29.png?v=2025-04-25T13%3A59%3A49.966Z&quality=85&w=3200 3200w"
+					sizes="(max-width: 479px) 100vw,(max-width: 767px) 100vw,(max-width: 991px) 100vw,(max-width: 1199px) 100vw,100vw"
+				/>
+				<Image
+					src="https://uploads.quarkly.io/67fa69a79710450018a84f18/images/Copie%20de%20Tableau%20%C3%A0%204%20colonnes%20%285%29.png?v=2025-04-25T14:02:32.002Z"
+					display="none"
+					sm-display="block"
+					sm-width="400px"
+					srcSet="https://smartuploads.quarkly.io/67fa69a79710450018a84f18/images/Copie%20de%20Tableau%20%C3%A0%204%20colonnes%20%285%29.png?v=2025-04-25T14%3A02%3A32.002Z&quality=85&w=500 500w,https://smartuploads.quarkly.io/67fa69a79710450018a84f18/images/Copie%20de%20Tableau%20%C3%A0%204%20colonnes%20%285%29.png?v=2025-04-25T14%3A02%3A32.002Z&quality=85&w=800 800w,https://smartuploads.quarkly.io/67fa69a79710450018a84f18/images/Copie%20de%20Tableau%20%C3%A0%204%20colonnes%20%285%29.png?v=2025-04-25T14%3A02%3A32.002Z&quality=85&w=1080 1080w,https://smartuploads.quarkly.io/67fa69a79710450018a84f18/images/Copie%20de%20Tableau%20%C3%A0%204%20colonnes%20%285%29.png?v=2025-04-25T14%3A02%3A32.002Z&quality=85&w=1600 1600w,https://smartuploads.quarkly.io/67fa69a79710450018a84f18/images/Copie%20de%20Tableau%20%C3%A0%204%20colonnes%20%285%29.png?v=2025-04-25T14%3A02%3A32.002Z&quality=85&w=2000 2000w,https://smartuploads.quarkly.io/67fa69a79710450018a84f18/images/Copie%20de%20Tableau%20%C3%A0%204%20colonnes%20%285%29.png?v=2025-04-25T14%3A02%3A32.002Z&quality=85&w=2600 2600w,https://smartuploads.quarkly.io/67fa69a79710450018a84f18/images/Copie%20de%20Tableau%20%C3%A0%204%20colonnes%20%285%29.png?v=2025-04-25T14%3A02%3A32.002Z&quality=85&w=3200 3200w"
+					sizes="(max-width: 479px) 100vw,(max-width: 767px) 100vw,(max-width: 991px) 100vw,(max-width: 1199px) 100vw,100vw"
+				/>
+				<Image
+					src="https://uploads.quarkly.io/67fa69a79710450018a84f18/images/Tableau%20%C3%A0%204%20colonnes%20%281%29.png?v=2025-04-25T14:06:19.411Z"
+					display="none"
+					sm-position="absolute"
+					sm-bottom="-968px"
+					sm-height="47px"
+					sm-left="7px"
+					sm-right="15.5px"
+					sm-top="1817px"
+					sm-width="391.5px"
+					sm-display="block"
+					srcSet="https://smartuploads.quarkly.io/67fa69a79710450018a84f18/images/Tableau%20%C3%A0%204%20colonnes%20%281%29.png?v=2025-04-25T14%3A06%3A19.411Z&quality=85&w=500 500w,https://smartuploads.quarkly.io/67fa69a79710450018a84f18/images/Tableau%20%C3%A0%204%20colonnes%20%281%29.png?v=2025-04-25T14%3A06%3A19.411Z&quality=85&w=800 800w,https://smartuploads.quarkly.io/67fa69a79710450018a84f18/images/Tableau%20%C3%A0%204%20colonnes%20%281%29.png?v=2025-04-25T14%3A06%3A19.411Z&quality=85&w=1080 1080w,https://smartuploads.quarkly.io/67fa69a79710450018a84f18/images/Tableau%20%C3%A0%204%20colonnes%20%281%29.png?v=2025-04-25T14%3A06%3A19.411Z&quality=85&w=1600 1600w,https://smartuploads.quarkly.io/67fa69a79710450018a84f18/images/Tableau%20%C3%A0%204%20colonnes%20%281%29.png?v=2025-04-25T14%3A06%3A19.411Z&quality=85&w=2000 2000w,https://smartuploads.quarkly.io/67fa69a79710450018a84f18/images/Tableau%20%C3%A0%204%20colonnes%20%281%29.png?v=2025-04-25T14%3A06%3A19.411Z&quality=85&w=2600 2600w,https://smartuploads.quarkly.io/67fa69a79710450018a84f18/images/Tableau%20%C3%A0%204%20colonnes%20%281%29.png?v=2025-04-25T14%3A06%3A19.411Z&quality=85&w=3200 3200w"
+					sizes="(max-width: 479px) 100vw,(max-width: 767px) 100vw,(max-width: 991px) 100vw,(max-width: 1199px) 100vw,100vw"
+				/>
+				<Image
+					src="https://uploads.quarkly.io/67fa69a79710450018a84f18/images/Tableau%20%C3%A0%204%20colonnes.png?v=2025-04-25T10:36:36.362Z"
+					display="block"
+					object-position="cover"
+					sm-display="none"
+					srcSet="https://smartuploads.quarkly.io/67fa69a79710450018a84f18/images/Tableau%20%C3%A0%204%20colonnes.png?v=2025-04-25T10%3A36%3A36.362Z&quality=85&w=500 500w,https://smartuploads.quarkly.io/67fa69a79710450018a84f18/images/Tableau%20%C3%A0%204%20colonnes.png?v=2025-04-25T10%3A36%3A36.362Z&quality=85&w=800 800w,https://smartuploads.quarkly.io/67fa69a79710450018a84f18/images/Tableau%20%C3%A0%204%20colonnes.png?v=2025-04-25T10%3A36%3A36.362Z&quality=85&w=1080 1080w,https://smartuploads.quarkly.io/67fa69a79710450018a84f18/images/Tableau%20%C3%A0%204%20colonnes.png?v=2025-04-25T10%3A36%3A36.362Z&quality=85&w=1600 1600w,https://smartuploads.quarkly.io/67fa69a79710450018a84f18/images/Tableau%20%C3%A0%204%20colonnes.png?v=2025-04-25T10%3A36%3A36.362Z&quality=85&w=2000 2000w,https://smartuploads.quarkly.io/67fa69a79710450018a84f18/images/Tableau%20%C3%A0%204%20colonnes.png?v=2025-04-25T10%3A36%3A36.362Z&quality=85&w=2600 2600w,https://smartuploads.quarkly.io/67fa69a79710450018a84f18/images/Tableau%20%C3%A0%204%20colonnes.png?v=2025-04-25T10%3A36%3A36.362Z&quality=85&w=3200 3200w"
+					sizes="(max-width: 479px) 100vw,(max-width: 767px) 100vw,(max-width: 991px) 100vw,(max-width: 1199px) 100vw,100vw"
+				/>
+				<Link
+					href="/#contact"
+					color="#000000"
+					position="absolute"
+					bottom="1158.94px"
+					height="100.3079294117647px"
+					top="1801.7364705882353px"
+					left="19.2353px"
+					right="33.4688px"
+					width="1227.28px"
+					pointer-events="auto"
+					user-select="auto"
+					sm-bottom="-975.25px"
+					sm-left="-3.016px"
+					sm-right="1px"
+					sm-top="568.45px"
+					sm-height="1302.8px"
+					sm-width="416.016px"
+				/>
 			</Box>
 		</Section>
 		<Section
